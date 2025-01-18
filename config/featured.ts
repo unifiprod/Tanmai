@@ -1,0 +1,26 @@
+export const featured = [
+  {
+    id: 1,
+    name: "Krushi Gardenia",
+    location: "Nagole, Hyderabad",
+    projectType: "Apartment",
+    bedrooms: "3,4 BHK",
+    size: "5.23 Acres",
+    units: "440",
+    image: "/krushi/banner.png",
+    route: "/projects/krushi",
+    brochureLink: "/krushi/borchure.pdf",
+  },
+  {
+    id: 2,
+    name: "NRI Green County",
+    location: "sadasivpet municipality",
+    projectType: "Villa",
+    bedrooms: "4 BHK",
+    size: "10 Acres",
+    units: "60",
+    image: "/greenvalley/banner.png",
+    route: "/projects/krushi",
+    brochureLink: "/krushi/borchure.pdf",
+  },
+];
