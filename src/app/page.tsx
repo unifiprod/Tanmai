@@ -2,13 +2,10 @@
 
 import Image from "next/image";
 import { why } from "../../config/why";
-import { ChevronLeftIcon, ChevronRightIcon } from "@radix-ui/react-icons";
 import { useRef, useState } from "react";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import { useRouter } from "next/navigation";
 import { featured } from "../../config/featured";
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {
@@ -19,8 +16,8 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import FeaturedProjects from "@/components/featured-projects";
 export default function Home() {
-  const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -48,43 +45,6 @@ export default function Home() {
     console.log("Form Submitted:", formData);
   };
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  function SampleNextArrow(props: any) {
-    const { onClick } = props;
-    return (
-      <div
-        onClick={onClick}
-        className="absolute top-1/2 sm:right-32 right-3 transform -translate-y-1/2 cursor-pointer z-10"
-      >
-        <ChevronRightIcon className="h-10 w-10 text-black border border-black rounded-full" />
-      </div>
-    );
-  }
-
-  // Custom Previous Arrow
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  function SamplePrevArrow(props: any) {
-    const { onClick } = props;
-    return (
-      <div
-        onClick={onClick}
-        className="absolute top-1/2 sm:left-28 left-3 transform -translate-y-1/2 cursor-pointer z-10"
-      >
-        <ChevronLeftIcon className="h-10 w-10 text-black border border-black rounded-full" />
-      </div>
-    );
-  }
-
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true, // Keep arrows enabled
-    nextArrow: <SampleNextArrow />, // Use Custom Next Arrow
-    prevArrow: <SamplePrevArrow />, // Use Custom Previous Arrow
-  };
   return (
     <div className="relative bg-[#E6E6E6]">
       {/* navbar */}
@@ -373,93 +333,8 @@ export default function Home() {
         </div>
       </section>
       {/* upcoming projects */}
-      <section
-        ref={projectRef}
-        className="w-full h-[100vh] sm:py-24 py-10  text-black flex flex-col justify-center"
-      >
-        <div className="flex items-center sm:px-36 px-5 justify-between">
-          <div>
-            <h2 className="font-prata text-4xl">Featured projects</h2>
-            <div className="border-t-2 my-4 w-64 border-[#BF7E32]"></div>
-          </div>
-          {/* <div className="flex gap-5">
-            <SamplePrevArrow onClick={() => {}} />
-            <SampleNextArrow onClick={() => {}} />
-          </div> */}
-        </div>
-        <Slider {...settings}>
-          {featured.map((item, index) => (
-            <div
-              key={index}
-              className=" w-full h-full flex items-center justify-center "
-            >
-              <div className=" flex flex-col w-full sm:ml-[200px] ml-0  max-w-[1100px] bg-white rounded-lg cursor-pointer">
-                <div
-                  onClick={() => router.push(item.route)}
-                  className="w-full h-[40vh] bg-black text-white rounded-t-lg"
-                >
-                  <Image
-                    src={item.image}
-                    width={1000}
-                    height={500}
-                    alt="banner"
-                    className="w-full h-full object-cover rounded-t-lg"
-                  />
-                </div>
-                <div className="flex sm:flex-row flex-col items-center justify-between sm:px-20 px-5 py-5">
-                  <div onClick={() => router.push(item.route)}>
-                    <div className="flex flex-col gap-0">
-                      <h2 className="text-[#BF7E32] font-prata text-3xl">
-                        {item.name}
-                      </h2>
-                      <p className="font-poppins text-sm">{item.location}</p>
-                    </div>
-                    <div className="grid grid-cols-2 font-poppins py-5 gap-5 gap-x-20">
-                      <div className="flex flex-col  items-start">
-                        <h2>Project Type</h2>
-                        <p className="text-[#BF7E32] font-semibold">
-                          {item.projectType}
-                        </p>
-                      </div>
-                      <div className="flex flex-col  items-start">
-                        <h2>Bedrooms</h2>
-                        <p className="text-[#BF7E32] font-semibold">
-                          {item.bedrooms}
-                        </p>
-                      </div>
-                      <div className="flex flex-col  items-start">
-                        <h2>Development Size</h2>
-                        <p className="text-[#BF7E32] font-semibold">
-                          {item.size}
-                        </p>
-                      </div>
-                      <div className="flex flex-col  items-start">
-                        <h2>Total Units</h2>
-                        <p className="text-[#BF7E32] font-semibold">
-                          {item.units} Units
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex flex-col gap-5 max-w-[250px] w-[300px]">
-                    <a
-                      href={item.brochureLink}
-                      target="_blank"
-                      download
-                      className="bg-[#BF7E32] text-center text-white px-5 py-3 rounded-sm cursor-pointer"
-                    >
-                      Download Brochure
-                    </a>
-                    <button className="bg-[#BF7E32] text-white px-5 py-3 rounded-sm cursor-pointer">
-                      Enquire
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </Slider>
-      </section>
+
+      <FeaturedProjects featured={featured} />
       {/* footer */}
       <footer ref={contactRef} className="relative w-full sm:h-[90vh] h-full">
         <div className="absolute top-0 left-0  w-full sm:h-[90vh] h-full object-cover">
