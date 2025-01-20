@@ -1,7 +1,7 @@
 "use client";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import { krushi } from "../../../../config/projects";
+import { krushi } from "@/config/projects";
 import Image from "next/image";
 import { useRef } from "react";
 import {

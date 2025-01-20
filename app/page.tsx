@@ -1,13 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { why } from "../../config/why";
+import { why } from "@/config/why";
 import { useRef, useState } from "react";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import { featured } from "../../config/featured";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { featured } from "@/config/featured";
 import {
   Dialog,
   DialogContent,
