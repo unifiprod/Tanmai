@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Card, CardContent } from "@/components/ui/card";
@@ -10,6 +10,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  type CarouselApi,
 } from "@/components/ui/carousel";
 
 interface FeaturedProject {
@@ -31,16 +32,35 @@ interface FeaturedProjectsProps {
 
 export default function FeaturedProjects({ featured }: FeaturedProjectsProps) {
   const router = useRouter();
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap());
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
 
   return (
-    <section className="w-full min-h-screen py-24 text-black flex flex-col justify-center">
+    <section className="w-full min-h-screen px-5 py-24 text-black flex flex-col justify-center">
       <div className="flex items-center px-5 sm:px-36 justify-between mb-8">
         <div>
           <h2 className="font-prata text-4xl">Featured projects</h2>
           <div className="border-t-2 my-4 w-64 border-[#BF7E32]"></div>
         </div>
       </div>
-      <Carousel className="w-full max-w-6xl mx-auto">
+      <Carousel
+        className="w-full sm:max-w-6xl max-w-full mx-auto"
+        setApi={setApi}
+      >
         <CarouselContent>
           {featured.map((item) => (
             <CarouselItem key={item.id}>
@@ -48,7 +68,7 @@ export default function FeaturedProjects({ featured }: FeaturedProjectsProps) {
                 <CardContent className="p-0">
                   <div
                     onClick={() => router.push(item.route)}
-                    className="w-full h-[50vh] bg-black text-white rounded-t-lg overflow-hidden"
+                    className="w-full sm:h-[50vh] h-[30vh] bg-black text-white rounded-t-lg overflow-hidden"
                   >
                     <Image
                       src={item.image || "/placeholder.svg"}
@@ -58,7 +78,7 @@ export default function FeaturedProjects({ featured }: FeaturedProjectsProps) {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="p-10 flex w-full  justify-between">
+                  <div className="sm:p-10 p-2 flex sm:flex-row flex-col w-full  justify-between">
                     <div className="w-full">
                       <h3 className="text-[#BF7E32] font-prata text-2xl mb-1">
                         {item.name}
@@ -89,12 +109,17 @@ export default function FeaturedProjects({ featured }: FeaturedProjectsProps) {
                         </div>
                       </div>
                     </div>
-                    <div className="flex flex-col gap-2 p-5 w-1/2">
+                    <div className="flex flex-col gap-2 sm:p-5 p-2 sm:w-1/2 w-full">
                       <Button
                         asChild
                         className="w-full bg-[#BF7E32] hover:bg-[#A66D2B] text-white"
                       >
-                        <a href={item.brochureLink} target="_blank" download>
+                        <a
+                          href={item.brochureLink}
+                          target="_blank"
+                          download
+                          rel="noreferrer"
+                        >
                           Download Brochure
                         </a>
                       </Button>
@@ -114,9 +139,26 @@ export default function FeaturedProjects({ featured }: FeaturedProjectsProps) {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="border border-[#BF7E32] bg-[#BF7E32] text-white hover:bg-inherit" />
-        <CarouselNext className="border border-[#BF7E32] bg-[#BF7E32] text-white hover:bg-inherit" />
+        <CarouselPrevious className="sm:block hidden  text-[#BF7E32] bg-inherit hover:bg-inherit" />
+        <CarouselNext className="sm:block hidden  text-[#BF7E32] bg-inherit hover:bg-inherit" />
       </Carousel>
+      <div className="py-2 text-center">
+        <div className="flex items-center justify-center gap-2 mt-4">
+          {Array.from({ length: count }).map((_, index) => (
+            <Button
+              key={index}
+              variant="outline"
+              size="icon"
+              className={`w-2 h-2 rounded-full p-0 ${
+                index === current
+                  ? "bg-[#BF7E32] border-[#BF7E32]"
+                  : "bg-gray-300 border-gray-300"
+              }`}
+              onClick={() => api?.scrollTo(index)}
+            />
+          ))}
+        </div>
+      </div>
     </section>
   );
 }

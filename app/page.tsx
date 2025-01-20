@@ -93,7 +93,7 @@ export default function Home() {
       {/* enquire button */}
       <Dialog>
         <DialogTrigger asChild>
-          <div className="sticky top-1/2  left-[100%] h-14 w-16">
+          <div className="sticky top-1/2 z-50  left-[100%] h-14 w-16">
             <button className="w-fit bg-[#BF7E32] text-white px-5 py-4 rounded-t-lg -rotate-90">
               Enquire
             </button>
@@ -194,7 +194,7 @@ export default function Home() {
         />
       </div>
       {/* why */}
-      <section className="w-full h-[100vh] sm:py-24 py-10 flex flex-col items-center justify-center">
+      <section className="w-full sm:h-[100vh] h-full sm:py-24 py-10 flex flex-col items-center justify-center">
         <h2 className="font-prata text-black sm:text-4xl text-3xl text-center">
           Why TANMAI Constructions ?
         </h2>
@@ -229,7 +229,7 @@ export default function Home() {
       {/* about */}
       <section
         ref={aboutRef}
-        className="relative w-full h-[100vh] sm:py-24 py-10 sm:px-36 px-5 text-black flex flex-col justify-center"
+        className="relative w-full sm:h-[100vh] h-full sm:py-24 py-10 sm:px-36 px-5 text-black flex flex-col justify-center"
       >
         <div className="bg-[#bf7d3264] absolute blur-3xl top-0 left-0 rounded-full w-48 h-48">
           .
@@ -263,7 +263,7 @@ export default function Home() {
         </p>
       </section>
       {/* mission */}
-      <section className="relative w-full h-[100vh] sm:py-24 py-10 sm:px-36 px-5 text-black flex flex-col justify-center">
+      <section className="relative w-full sm:h-[100vh] h-full sm:py-24 py-10 sm:px-36 px-5 text-black flex flex-col justify-center">
         <div className="bg-[#bf7d3264] absolute blur-3xl top-0 right-0 rounded-full w-48 h-48">
           .
         </div>
@@ -293,9 +293,9 @@ export default function Home() {
         </p>
       </section>
       {/* chairman's message */}
-      <section className=" w-full h-[100vh] sm:py-24 py-10 sm:px-36 px-5 text-black ">
+      <section className=" w-full sm:h-[100vh] h-full sm:py-24 py-10 sm:px-36 px-5 text-black ">
         <div className="relative flex flex-col justify-center w-full h-full">
-          <div className="w-full h-full bg-[#bf7d3222] absolute blur-3xl top-0 left-0 rounded-lg"></div>
+          <div className="w-full h-full bg-[#bf7d3222] absolute blur-3xl top-0 left-0 rounded-lg "></div>
           <h2 className="font-prata text-4xl">Chairman&apos;s Message</h2>
           <div className="border-t-2 my-4 w-64 border-[#BF7E32]"></div>
           <div className="flex sm:flex-row flex-col-reverse items-center justify-between gap-10">
@@ -324,7 +324,7 @@ export default function Home() {
               <br />
               Chairman, Tanmai Constructions
             </p>
-            <div className="sm:w-[30%] w-full h-full bg-gray-500 text-black flex items-center justify-center">
+            <div className="sm:w-[30%] w-full h-full bg-gray-500 min-h-[200px] text-black flex items-center justify-center">
               <p className="text-4xl">Photo</p>
             </div>
           </div>
