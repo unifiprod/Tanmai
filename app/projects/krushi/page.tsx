@@ -13,6 +13,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { useState } from "react";
+import { HorizontalScrollCarousel } from "@/components/HorizontalScrollCarousel";
 
 function Krushi() {
   const [formData, setFormData] = useState({
@@ -263,7 +264,7 @@ function Krushi() {
           </h2>
         </div>
       </div>
-      <div className="w-full overflow-x-auto whitespace-nowrap mb-10">
+      {/* <div className="w-full overflow-x-auto whitespace-nowrap mb-10">
         {krushi.gallery.map((image, index) => (
           <div key={index} className="mx-2 inline-block w-72 h-72 bg-gray-400">
             <Image
@@ -275,7 +276,8 @@ function Krushi() {
             />
           </div>
         ))}
-      </div>
+      </div> */}
+      <HorizontalScrollCarousel cards={krushi.gallery} />
       <Footer />
     </div>
   );
