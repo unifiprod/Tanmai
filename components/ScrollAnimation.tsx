@@ -25,7 +25,7 @@ export const ScrollAnimation = () => {
 
   return (
     <section
-      className="flex sm:flex-row flex-col sm:items-center items-start justify-center"
+      className="flex sm:flex-row flex-col sm:items-center items-start justify-center w-screen overflow-hidden"
       ref={containerRef}
     >
       <div className="sm:w-[40%] w-full text-left ml-[5%]">
