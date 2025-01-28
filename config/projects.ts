@@ -1,5 +1,5 @@
 export const krushi = {
-  bannerImg: "/krushi/banner.png",
+  bannerImg: "/krushi/banner.jpg",
   logo: "/krushi/logo.png",
   title: "Krushi Gardenia",
   location:
@@ -25,15 +25,15 @@ export const krushi = {
     "Reception and lounge",
   ],
   gallery: [
-    "/krushi/g-1.png",
-    "/krushi/g-2.png",
-    "/krushi/g-3.png",
-    "/krushi/g-4.png",
-    "/krushi/g-5.png",
-    "/krushi/g-6.png",
-    "/krushi/g-7.png",
-    "/krushi/g-8.png",
-    "/krushi/g-9.png",
-    "/krushi/g-10.png",
+    "/krushi/g-1.jpg",
+    "/krushi/g-2.jpg",
+    "/krushi/g-3.jpg",
+    "/krushi/g-4.jpg",
+    "/krushi/g-5.jpg",
+    "/krushi/g-6.jpg",
+    "/krushi/g-7.jpg",
+    "/krushi/g-8.jpg",
+    "/krushi/g-9.jpg",
+    "/krushi/g-10.jpg",
   ],
 };

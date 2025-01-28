@@ -58,8 +58,8 @@ export const WhySection = () => {
               className="block sm:hidden"
             />
             <div>
-              <h3 className="font-prata sm:text-3xl text-xl">{item.title}</h3>
-              <p className="font-poppins text-sm">{item.desc}</p>
+              <h3 className="font-arimo sm:text-3xl text-xl">{item.title}</h3>
+              <p className="font-arimo text-sm">{item.desc}</p>
             </div>
           </motion.div>
         ))}

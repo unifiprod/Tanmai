@@ -57,7 +57,7 @@ const CenterImage: FC = () => {
         clipPath,
         backgroundSize,
         opacity,
-        backgroundImage: "url(/banner.png)",
+        backgroundImage: "url(/banner.jpg)",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
@@ -108,28 +108,28 @@ const ParallaxImages: FC = () => {
   return (
     <div className="mx-auto max-w-5xl px-4 pt-[200px]">
       <ParallaxImg
-        src="/krushi/g-1.png"
+        src="/krushi/g-1.jpg"
         alt="An example of a space launch"
         start={-200}
         end={200}
         className="w-1/3"
       />
       <ParallaxImg
-        src="/krushi/g-4.png"
+        src="/krushi/g-4.jpg"
         alt="An example of a space launch"
         start={200}
         end={-250}
         className="mx-auto w-2/3"
       />
       <ParallaxImg
-        src="/krushi/g-2.png"
+        src="/krushi/g-2.jpg"
         alt="Orbiting satellite"
         start={-200}
         end={200}
         className="ml-auto w-1/3"
       />
       <ParallaxImg
-        src="/krushi/g-3.png"
+        src="/krushi/g-3.jpg"
         alt="Orbiting satellite"
         start={0}
         end={-500}
