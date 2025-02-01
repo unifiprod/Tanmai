@@ -27,13 +27,13 @@ function Footer() {
   const router = useRouter();
   return (
     <footer className="relative w-full sm:h-[90vh] h-full">
-      <div className="absolute top-0 left-0  w-full sm:h-[90vh] h-full object-cover">
+      <div className="absolute top-0 left-0  w-full sm:h-[90vh] h-full object-cover bg-black">
         <Image
-          src={"/footer.png"}
+          src={"/lavender/4.webp"}
           width={1400}
           height={1080}
           alt="footer"
-          className="w-full sm:h-[90vh] h-full object-cover"
+          className="w-full sm:h-[90vh] h-full object-cover opacity-40"
         />
       </div>
       <div className=" w-full h-[80%] flex flex-wrap  items-start justify-between sm:px-20 px-5 py-10 font-poppins sm:gap-48 gap-5">

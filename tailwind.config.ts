@@ -60,7 +60,7 @@ export default {
     fontFamily: {
       prata: ["Prata", "serif"],
       poppins: ["Poppins", "sans-serif"],
-      Arimo: ["Arimo", "serif"],
+      Arimo: ["Arimo", "sans-serif"],
     },
     backgroundImage: {
       "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

@@ -36,7 +36,7 @@ export default function FeaturedProjects({ featured }: FeaturedProjectsProps) {
     <section className="w-full min-h-screen py-24 text-black flex flex-col justify-center">
       <div className="flex items-center px-5 sm:px-36 justify-between mb-8">
         <div>
-          <h2 className="font-prata text-4xl">Featured projects</h2>
+          <h2 className="font-Arimo text-4xl">Featured projects</h2>
           <div className="border-t-2 my-4 w-64 border-[#BF7E32]"></div>
         </div>
       </div>
@@ -60,13 +60,13 @@ export default function FeaturedProjects({ featured }: FeaturedProjectsProps) {
                   </div>
                   <div className="p-10 flex w-full  justify-between">
                     <div className="w-full">
-                      <h3 className="text-[#BF7E32] font-prata text-2xl mb-1">
+                      <h3 className="text-[#BF7E32] font-Arimo text-2xl mb-1">
                         {item.name}
                       </h3>
                       <p className="font-poppins text-sm mb-4">
                         {item.location}
                       </p>
-                      <div className="grid grid-cols-2 font-poppins gap-4">
+                      <div className="grid grid-cols-2 font-Arimo gap-4">
                         <div>
                           <h4 className="text-sm font-semibold">
                             Project Type

@@ -56,7 +56,7 @@ function Krushi() {
         </DialogTrigger>
         <DialogContent className="text-white bg-[#ffffff56] backdrop-blur-xl">
           <DialogHeader>
-            <DialogTitle className="text-3xl text-[#BF7E32] font-prata">
+            <DialogTitle className="text-3xl text-[#BF7E32] font-Arimo">
               Enquire
             </DialogTitle>
             <DialogDescription>
@@ -151,13 +151,13 @@ function Krushi() {
                 className="w-full h-full object-cover rounded-mds"
               />
             </div>
-            <h2 className="text-3xl font-prata text-[#BF7E32]">
+            <h2 className="text-3xl font-Arimo text-[#BF7E32]">
               {krushi.title}
             </h2>
-            <p className="text-sm font-poppins w-3/4">{krushi.location}</p>
+            <p className="text-sm font-Arimo w-3/4">{krushi.location}</p>
           </div>
           <div className="flex flex-col items-center gap-2 justify-center border-l-2 border-[#BF7E32] px-10 py-5">
-            <div className="grid grid-cols-2 font-poppins gap-5">
+            <div className="grid grid-cols-2 font-Arimo gap-5">
               <div className="flex flex-col  items-start">
                 <h2>Project Type</h2>
                 <p className="text-[#BF7E32] font-semibold">{krushi.type}</p>
@@ -193,7 +193,7 @@ function Krushi() {
           </div>
         </div>
         {/* inner nav */}
-        <nav className="flex items-center gap-5 font-prata text-lg py-5">
+        <nav className="flex items-center gap-5 font-Arimo text-lg py-5">
           <a
             className="border-b-2 border-[#BF7E32] cursor-pointer"
             onClick={() => scrollToSection(aboutRef)}
@@ -220,7 +220,7 @@ function Krushi() {
           </a>
         </nav>
         <div ref={aboutRef} className="flex flex-col items-start gap-5 py-10">
-          <h2 className="font-prata text-3xl border-b-2 border-[#BF7E32] w-fit">
+          <h2 className="font-Arimo text-3xl border-b-2 border-[#BF7E32] w-fit">
             About Krushi Gardenia
           </h2>
           <p>{krushi.about}</p>
@@ -229,7 +229,7 @@ function Krushi() {
           ref={planRef}
           className="flex flex-col items-start justify-start w-full gap-5 py-10"
         >
-          <h2 className="font-prata text-3xl border-b-2 border-[#BF7E32] w-fit">
+          <h2 className="font-Arimo text-3xl border-b-2 border-[#BF7E32] w-fit">
             Plan
           </h2>
           <div className="w-full h-[100vh] bg-gray-400 ">
@@ -246,10 +246,10 @@ function Krushi() {
           ref={amenitiesRef}
           className="flex flex-col items-start justify-start w-full gap-5 py-10"
         >
-          <h2 className="font-prata text-3xl border-b-2 border-[#BF7E32] w-fit">
+          <h2 className="font-Arimo text-3xl border-b-2 border-[#BF7E32] w-fit">
             Amenities
           </h2>
-          <ul className="font-poppins gap-2 flex flex-col px-5">
+          <ul className="font-Arimo gap-2 flex flex-col px-5">
             {krushi.amenities.map((amenity, index) => (
               <li key={index}>&#8226; {amenity}</li>
             ))}
@@ -259,7 +259,7 @@ function Krushi() {
           ref={galleryRef}
           className="flex flex-col items-start justify-start w-full gap-5 py-10"
         >
-          <h2 className="font-prata text-3xl border-b-2 border-[#BF7E32] w-fit">
+          <h2 className="font-Arimo text-3xl border-b-2 border-[#BF7E32] w-fit">
             Gallery
           </h2>
         </div>

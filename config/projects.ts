@@ -37,3 +37,43 @@ export const krushi = {
     "/krushi/g-10.jpg",
   ],
 };
+
+export const lavender = {
+  bannerImg: "/lavender/2.webp",
+  logo: "/lavender/logo.png",
+  title: "Lavender Sky",
+  location:
+    " Sy No99/A, 99/E/EE, Ward No 2, Block No.1, Mamatha Nagar Colony,Nagole village, Uppal Mandal, Ranga Reddy Dist, Telangana - 500068",
+  type: "Apartment",
+  area: "5.23",
+  rooms: "3,4 BHK",
+  units: 440,
+  borchureLink: "/krushi/borchure.pdf",
+  about:
+    " At Tanmai Constructions, we believe that every project is more than just a structure it&apos;s a reflection of dreams, aspirations, and a vision brought to life. Established with a passion for creating exceptional spaces, we are a new name in the construction.",
+  planLink: "/lavender/10.webp",
+  amenities: [
+    "Coffee shop",
+    "Pool side seating desk",
+    "Guest rooms",
+    "Family swimming pool",
+    "Meditation/ yoga hall",
+    "Out Door seating decks",
+    "Super Market",
+    "Uni sex saloon and spa",
+    "Clinic",
+    "Reception and lounge",
+  ],
+  gallery: [
+    "/lavender/1.webp",
+    "/lavender/2.webp",
+    "/lavender/3.webp",
+    "/lavender/4.webp",
+    "/lavender/5.webp",
+    "/lavender/6.webp",
+    "/lavender/7.webp",
+    "/lavender/8.webp",
+    "/lavender/9.webp",
+    "/lavender/10.webp",
+  ],
+};

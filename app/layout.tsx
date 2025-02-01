@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="font-arimo">
+    <html lang="en" className="!font-arimo">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

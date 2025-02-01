@@ -1,6 +1,18 @@
 export const featured = [
   {
     id: 1,
+    name: "Lavender Sky",
+    location: "Nagole, Hyderabad",
+    projectType: "Apartment",
+    bedrooms: "3,4 BHK",
+    size: "5.23 Acres",
+    units: "440",
+    image: "/lavender/2.webp",
+    route: "/projects/lavender",
+    brochureLink: "/krushi/borchure.pdf",
+  },
+  {
+    id: 2,
     name: "Krushi Gardenia",
     location: "Nagole, Hyderabad",
     projectType: "Apartment",
@@ -12,7 +24,7 @@ export const featured = [
     brochureLink: "/krushi/borchure.pdf",
   },
   {
-    id: 2,
+    id: 3,
     name: "NRI Green County",
     location: "sadasivpet municipality",
     projectType: "Villa",
