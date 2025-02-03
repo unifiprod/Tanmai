@@ -58,7 +58,7 @@ export default function FeaturedProjects({ featured }: FeaturedProjectsProps) {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="p-10 flex w-full  justify-between">
+                  <div className="sm:p-10 p-4 flex sm:flex-row flex-col  w-full  justify-between">
                     <div className="w-full">
                       <h3 className="text-[#BF7E32] font-Arimo text-2xl mb-1">
                         {item.name}
@@ -89,7 +89,7 @@ export default function FeaturedProjects({ featured }: FeaturedProjectsProps) {
                         </div>
                       </div>
                     </div>
-                    <div className="flex flex-col gap-2 p-5 w-1/2">
+                    <div className="flex flex-col gap-2 p-5 sm:w-1/2 w-full">
                       <Button
                         asChild
                         className="w-full bg-[#BF7E32] hover:bg-[#A66D2B] text-white"

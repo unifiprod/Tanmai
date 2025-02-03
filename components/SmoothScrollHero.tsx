@@ -22,7 +22,7 @@ const Hero: FC = () => {
   return (
     <div
       style={{ height: `calc(${SECTION_HEIGHT}px + 100vh)` }}
-      className="relative w-full"
+      className="relative w-full -mt-56"
     >
       <CenterImage />
       <ParallaxImages />
@@ -34,8 +34,8 @@ const Hero: FC = () => {
 const CenterImage: FC = () => {
   const { scrollY } = useScroll();
 
-  const clip1 = useTransform(scrollY, [0, 1500], [25, 0]);
-  const clip2 = useTransform(scrollY, [0, 1500], [75, 100]);
+  const clip1 = useTransform(scrollY, [0, 1500], [0, 25]);
+  const clip2 = useTransform(scrollY, [0, 1500], [100, 75]);
 
   const clipPath = useMotionTemplate`polygon(${clip1}% ${clip1}%, ${clip2}% ${clip1}%, ${clip2}% ${clip2}%, ${clip1}% ${clip2}%)`;
 
@@ -110,7 +110,7 @@ const ParallaxImages: FC = () => {
       <ParallaxImg
         src="/lavender/1.webp"
         alt="An example of a space launch"
-        start={-200}
+        start={-50}
         end={200}
         className="w-1/3"
       />

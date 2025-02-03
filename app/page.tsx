@@ -443,9 +443,24 @@ export default function Home() {
             variants={footerVariants}
           >
             <h2 className="font-Arimo text-2xl text-[#BF7E32]">Menu</h2>
-            <h3 className="font-medium">Home</h3>
-            <h3 className="font-medium">About us</h3>
-            <h3 className="font-medium">Projects</h3>
+            <h3
+              className="font-medium"
+              onClick={() => scrollToSection(homeRef)}
+            >
+              Home
+            </h3>
+            <h3
+              className="font-medium"
+              onClick={() => scrollToSection(aboutRef)}
+            >
+              About us
+            </h3>
+            <h3
+              className="font-medium"
+              onClick={() => scrollToSection(projectRef)}
+            >
+              Projects
+            </h3>
           </motion.div>
           <motion.div
             className="sm:max-w-[40%] backdrop-blur-lg bg-[#ffffff24] w-full font-Arimo text-white rounded-lg px-10 py-10"
