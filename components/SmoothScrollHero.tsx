@@ -22,7 +22,7 @@ const Hero: FC = () => {
   return (
     <div
       style={{ height: `calc(${SECTION_HEIGHT}px + 100vh)` }}
-      className="relative w-full -mt-56"
+      className="relative w-full sm:-mt-56 -mt-0"
     >
       <CenterImage />
       <ParallaxImages />

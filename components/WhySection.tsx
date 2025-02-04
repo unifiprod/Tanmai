@@ -21,7 +21,7 @@ const itemVariants = {
 export const WhySection = () => {
   return (
     <motion.section
-      className="w-full h-[100vh] sm:py-24 py-10 flex flex-col items-center justify-center"
+      className="w-full sm:h-[100vh] h-full sm:py-24 py-10 flex flex-col sm:gap-1 gap-5 items-center justify-center"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }} // Animates only once when 30% of the section is visible
@@ -34,13 +34,13 @@ export const WhySection = () => {
         Why TANMAI ventures ?
       </motion.h2>
       <motion.div
-        className="grid sm:grid-cols-2 grid-cols-1 sm:py-10 py-5 sm:px-20 px-5 sm:gap-10 gap-5"
+        className="sm:w-3/4 w-full grid items-start justify-start sm:grid-cols-2 grid-cols-1 sm:py-10 py-5 px-5 sm:gap-10 gap-5"
         variants={containerVariants}
       >
         {why.map((item) => (
           <motion.div
             key={item.title}
-            className="flex items-center justify-between sm:gap-5 gap-2 text-black"
+            className="flex items-start justify-start sm:gap-5 gap-2 text-black"
             variants={itemVariants}
           >
             <Image
@@ -57,7 +57,7 @@ export const WhySection = () => {
               height={70}
               className="block sm:hidden"
             />
-            <div>
+            <div className="flex flex-col items-start justify-start gap-2">
               <h3 className="font-arimo sm:text-3xl text-xl">{item.title}</h3>
               <p className="font-arimo text-sm">{item.desc}</p>
             </div>

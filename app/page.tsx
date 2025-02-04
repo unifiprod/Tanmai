@@ -21,6 +21,8 @@ import TextReveal from "@/components/textReveal";
 import { ScrollAnimation } from "@/components/ScrollAnimation";
 import { WhySection } from "@/components/WhySection";
 import { AnimatePresence, motion } from "framer-motion";
+import { SiGooglemaps } from "react-icons/si";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -37,6 +39,7 @@ export default function Home() {
   const aboutRef = useRef(null);
   const projectRef = useRef(null);
   const contactRef = useRef(null);
+  const router = useRouter();
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleChange = (e: any) => {
@@ -49,27 +52,6 @@ export default function Home() {
     e.preventDefault();
     console.log("Form Submitted:", formData);
   };
-
-  // const about = `
-  //           At Tanmai ventures, we believe that every project is more than just
-  //           a structure it&apos;s a reflection of dreams, aspirations, and a
-  //           vision brought to life. Established with a passion for creating
-  //           exceptional spaces, we are a new name in the construction industry,
-  //           driven by innovation, quality, and a deep commitment to our clients.
-
-  //           Our journey began with the successful completion of our first
-  //           project, which stands as a proud testament to our dedication to
-  //           excellence. While we may be at the start of our story, our approach
-  //           is built on modern techniques, transparent operations, and a
-  //           customer-first mindset. We are committed to transforming ideas into
-  //           reality while maintaining the highest standards of design, safety,
-  //           and sustainability.
-
-  //           With a focus on building trust and delivering value, we aim to
-  //           establish ourselves as a trusted name in the construction sector.
-  //           Our mission is simple: to create spaces that inspire, endure, and
-  //           enhance the lives of the people who inhabit them.
-  //         `;
 
   const footerVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -106,10 +88,10 @@ export default function Home() {
     <div className="relative bg-[#E6E6E6]">
       {/* navbar */}
 
-      <header className="sm:sticky w-full  top-0 z-20 flex justify-center items-center">
+      <header className="sm:sticky w-full  top-0 z-20 flex justify-center items-center ">
         <nav
           data-layername="menu"
-          className={`flex justify-between items-center w-full bg-[#E6E6E6]  sm:px-10 sm:py-2 px-0 py-0`}
+          className={`flex justify-between items-center w-full bg-[#E6E6E6]  sm:px-10 sm:py-2 px-5 py-5`}
         >
           {/* Logo */}
           <Image
@@ -320,8 +302,17 @@ export default function Home() {
         </DialogContent>
       </Dialog>
 
-      <div ref={homeRef}>
+      <div className="sm:block hidden" ref={homeRef}>
         <SmoothScrollHero />
+      </div>
+      <div className="w-full h-[90vh] bg-black -mt-16 sm:hidden block">
+        <Image
+          src={"/lavender/2.webp"}
+          alt="hero image"
+          width={500}
+          height={500}
+          className="w-full h-full object-cover"
+        />
       </div>
 
       <WhySection />
@@ -329,9 +320,9 @@ export default function Home() {
       {/* about */}
       <section
         ref={aboutRef}
-        className="relative w-full h-full sm:py-24 py-20 sm:px-36 px-5 text-black flex flex-col justify-center"
+        className="relative w-full h-full text-black  py-0 sm:px-36 px-5  flex flex-col sm:justify-center justify-start"
       >
-        <div className="bg-[#bf7d3264] absolute blur-3xl top-0 left-0 rounded-full w-48 h-48">
+        <div className="bg-[#bf7d3264] absolute blur-3xl sm:top-0 top-28 left-0 rounded-full w-48 h-48">
           .
         </div>
 
@@ -340,30 +331,7 @@ export default function Home() {
           <div className="border-t-2 my-4 w-28 border-[#BF7E32]"></div>
         </div>
 
-        <div className="font-arimo  ">
-          {" "}
-          {/* <span>
-            At Tanmai ventures, we believe that every project is more than just
-            a structure it&apos;s a reflection of dreams, aspirations, and a
-            vision brought to life. Established with a passion for creating
-            exceptional spaces, we are a new name in the construction industry,
-            driven by innovation, quality, and a deep commitment to our clients.
-          </span>
-          <span>
-            Our journey began with the successful completion of our first
-            project, which stands as a proud testament to our dedication to
-            excellence. While we may be at the start of our story, our approach
-            is built on modern techniques, transparent operations, and a
-            customer-first mindset. We are committed to transforming ideas into
-            reality while maintaining the highest standards of design, safety,
-            and sustainability.
-          </span>
-          <span>
-            With a focus on building trust and delivering value, we aim to
-            establish ourselves as a trusted name in the construction sector.
-            Our mission is simple: to create spaces that inspire, endure, and
-            enhance the lives of the people who inhabit them.
-          </span> */}
+        <div className="font-arimo">
           <TextReveal value={about} />
         </div>
       </section>
@@ -425,16 +393,24 @@ export default function Home() {
             </div>
             <div className="flex gap-5 items-center">
               <motion.div variants={iconVariants}>
-                <FaInstagram className="text-white h-5 w-5" />
+                <FaInstagram className="text-white h-5 w-5 cursor-pointer hover:text-[#BF7E32]" />
               </motion.div>
               <motion.div variants={iconVariants}>
-                <FaFacebook className="text-white h-5 w-5" />
+                <FaFacebook className="text-white h-5 w-5 cursor-pointer hover:text-[#BF7E32]" />
               </motion.div>
               <motion.div variants={iconVariants}>
-                <FaSquareXTwitter className="text-white h-5 w-5" />
+                <FaSquareXTwitter className="text-white h-5 w-5 cursor-pointer hover:text-[#BF7E32]" />
               </motion.div>
               <motion.div variants={iconVariants}>
-                <FaYoutube className="text-white h-5 w-5" />
+                <FaYoutube className="text-white h-5 w-5 cursor-pointer hover:text-[#BF7E32]" />
+              </motion.div>
+              <motion.div variants={iconVariants}>
+                <SiGooglemaps
+                  onClick={() =>
+                    router.push("https://goo.gl/maps/4JSNedjLDYKnKKHg9")
+                  }
+                  className="text-white h-5 w-5 cursor-pointer hover:text-[#BF7E32]"
+                />
               </motion.div>
             </div>
           </motion.div>

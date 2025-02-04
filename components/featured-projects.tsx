@@ -23,6 +23,7 @@ interface FeaturedProject {
   image: string;
   route: string;
   brochureLink: string;
+  badge: string;
 }
 
 interface FeaturedProjectsProps {
@@ -33,8 +34,8 @@ export default function FeaturedProjects({ featured }: FeaturedProjectsProps) {
   const router = useRouter();
 
   return (
-    <section className="w-full min-h-screen py-24 text-black flex flex-col justify-center">
-      <div className="flex items-center px-5 sm:px-36 justify-between mb-8">
+    <section className="w-full min-h-screen sm:py-24 py-0 px-2 text-black flex flex-col justify-center">
+      <div className="flex items-center px-2 sm:px-36 justify-between mb-8">
         <div>
           <h2 className="font-Arimo text-4xl">Featured projects</h2>
           <div className="border-t-2 my-4 w-64 border-[#BF7E32]"></div>
@@ -60,13 +61,33 @@ export default function FeaturedProjects({ featured }: FeaturedProjectsProps) {
                   </div>
                   <div className="sm:p-10 p-4 flex sm:flex-row flex-col  w-full  justify-between">
                     <div className="w-full">
-                      <h3 className="text-[#BF7E32] font-Arimo text-2xl mb-1">
-                        {item.name}
-                      </h3>
-                      <p className="font-poppins text-sm mb-4">
-                        {item.location}
-                      </p>
+                      {/* <div className="flex items-start sm:gap-52 gap-10">
+                        <div>
+                          <h3 className="text-[#BF7E32] font-Arimo text-2xl mb-1">
+                            {item.name}
+                          </h3>
+                          <p className="font-poppins text-sm mb-4">
+                            {item.location}
+                          </p>
+                        </div>
+                        <p className="bg-[#BF7E32] text-sm text-white py-2 px-4 mt-6 rounded-sm">
+                          {item.badge}
+                        </p>
+                      </div> */}
                       <div className="grid grid-cols-2 font-Arimo gap-4">
+                        <div>
+                          <h3 className="text-[#BF7E32] font-Arimo text-2xl mb-1">
+                            {item.name}
+                          </h3>
+                          <p className="font-poppins text-sm mb-4">
+                            {item.location}
+                          </p>
+                        </div>
+                        <div className="w-full h-full flex flex-col justify-end items-start">
+                          <p className="bg-[#BF7E32] w-fit text-sm text-white py-2 px-4 h-fit rounded-sm">
+                            {item.badge}
+                          </p>
+                        </div>
                         <div>
                           <h4 className="text-sm font-semibold">
                             Project Type

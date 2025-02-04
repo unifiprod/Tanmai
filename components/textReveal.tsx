@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 const TextReveal = ({ value }: any) => {
@@ -31,7 +31,9 @@ const TextReveal = ({ value }: any) => {
 };
 
 const Word = ({ word, range, progress }: any) => {
-  const opacity = useTransform(progress, range, [0, 1]);
+  const rawOpacity = useTransform(progress, range, [0, 1]);
+
+  const opacity = useSpring(rawOpacity, { stiffness: 50, damping: 20 });
 
   return (
     <span className="relative">

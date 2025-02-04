@@ -19,7 +19,7 @@ body {
 }
 
 section {
-  min-height: 100vh;
+  min-height: 80vh;
   margin: 100px auto;
 }
 
@@ -34,14 +34,6 @@ section {
 
 .top-section h1 {
   font-size: 60px;
-}
-
-.scroll-container {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 100px auto;
-  overflow: hidden;
 }
 
 .img-container {

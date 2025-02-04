@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
+import { SiGooglemaps } from "react-icons/si";
 
 function Footer() {
   const [formData, setFormData] = useState({
@@ -62,22 +63,37 @@ function Footer() {
             <h3 className="font-medium">Email:</h3>
             <p className="font-light text-sm">properties@tanmai.com</p>
           </div>
-          <div className="flex gap-5 items-center">
-            <FaInstagram className="text-white h-5 w-5" />
-            <FaFacebook className="text-white h-5 w-5" />
-            <FaSquareXTwitter className="text-white h-5 w-5" />
-            <FaYoutube className="text-white h-5 w-5" />
+          <div className="flex gap-5 items-center ">
+            <FaInstagram className="text-white h-5 w-5 cursor-pointer hover:text-[#BF7E32] z-50" />
+            <FaFacebook className="text-white h-5 w-5 cursor-pointer hover:text-[#BF7E32]" />
+            <FaSquareXTwitter className="text-white h-5 w-5 cursor-pointer hover:text-[#BF7E32]" />
+            <FaYoutube className="text-white h-5 w-5 cursor-pointer hover:text-[#BF7E32]" />
+            <SiGooglemaps
+              onClick={() =>
+                router.push("https://goo.gl/maps/4JSNedjLDYKnKKHg9")
+              }
+              className="text-white h-5 w-5 cursor-pointer hover:text-[#BF7E32]"
+            />
           </div>
         </div>
         <div className="flex flex-col gap-5 text-white z-10">
           <h2 className="font-prata text-2xl text-[#BF7E32]">Menu</h2>
-          <h3 className="font-medium" onClick={() => router.push("/")}>
+          <h3
+            className="font-medium cursor-pointer"
+            onClick={() => router.push("/")}
+          >
             Home
           </h3>
-          <h3 className="font-medium" onClick={() => router.push("/")}>
+          <h3
+            className="font-medium cursor-pointer"
+            onClick={() => router.push("/")}
+          >
             About us
           </h3>
-          <h3 className="font-medium" onClick={() => router.push("/")}>
+          <h3
+            className="font-medium cursor-pointer"
+            onClick={() => router.push("/")}
+          >
             Projects
           </h3>
         </div>

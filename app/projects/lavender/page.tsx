@@ -13,7 +13,15 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { useState } from "react";
-import { HorizontalScrollCarousel } from "@/components/HorizontalScrollCarousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { Card, CardContent } from "@/components/ui/card";
+// import { HorizontalScrollCarousel } from "@/components/HorizontalScrollCarousel";
 
 function Lavender() {
   const [formData, setFormData] = useState({
@@ -48,7 +56,7 @@ function Lavender() {
       {/* enquire */}
       <Dialog>
         <DialogTrigger asChild>
-          <div className="sticky top-1/2  left-[100%] h-14 w-16">
+          <div className="sticky top-1/2 z-50  left-[100%] h-14 w-16">
             <button className="w-fit bg-[#BF7E32] text-white px-5 py-4 rounded-t-lg -rotate-90">
               Enquire
             </button>
@@ -128,7 +136,7 @@ function Lavender() {
         </DialogContent>
       </Dialog>
       {/* block */}
-      <div className="px-24 -mt-[2%]">
+      <div className=" sm:px-24 px-2 sm:-mt-[2%] -mt-0">
         {/* banner */}
         <div className="w-full h-[50vh]  text-black rounded-sm">
           <Image
@@ -140,8 +148,8 @@ function Lavender() {
           />
         </div>
         {/* details */}
-        <div className="flex mt-5 px-5 py-2 ">
-          <div className="flex flex-col gap-2 items-start">
+        <div className="flex sm:flex-row flex-col sm:gap-0 gap-5 mt-5 px-5 py-2 ">
+          <div className="flex flex-col gap-2 items-start w-3/4">
             <div className="w-72 h-40 ">
               <Image
                 src={lavender.logo}
@@ -156,7 +164,7 @@ function Lavender() {
             </h2>
             <p className="text-sm font-Arimo w-3/4">{lavender.location}</p>
           </div>
-          <div className="flex flex-col items-center gap-2 justify-center border-l-2 border-[#BF7E32] px-10 py-5">
+          <div className="flex flex-col items-center gap-2 justify-center sm:border-l-2 border-l-0 border-[#BF7E32] px-10 py-5">
             <div className="grid grid-cols-2 font-Arimo gap-5">
               <div className="flex flex-col  items-start">
                 <h2>Project Type</h2>
@@ -264,20 +272,37 @@ function Lavender() {
           </h2>
         </div>
       </div>
-      {/* <div className="w-full overflow-x-auto whitespace-nowrap mb-10">
-        {lavender.gallery.map((image, index) => (
-          <div key={index} className="mx-2 inline-block w-72 h-72 bg-gray-400">
-            <Image
-              src={image}
-              width={500}
-              height={100}
-              alt={image}
-              className="w-72 h-72 object-cover"
-            />
-          </div>
-        ))}
-      </div> */}
-      <HorizontalScrollCarousel cards={lavender.gallery} />
+      <div className="w-full flex items-center justify-center mb-10">
+        <Carousel
+          opts={{
+            align: "start",
+          }}
+          className="w-full max-w-4xl"
+        >
+          <CarouselContent>
+            {lavender.gallery.map((image, index) => (
+              <CarouselItem key={index} className="sm:basis-1/3">
+                <div className="p-1">
+                  <Card>
+                    <CardContent className="h-auto sm:w-72 w-full flex aspect-square items-center justify-center p-0">
+                      <Image
+                        src={image}
+                        width={100}
+                        height={100}
+                        alt={image}
+                        className="w-full h-auto object-cover aspect-square rounded-md"
+                      />
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="bg-[#BF7E32] text-white sm:block hidden" />
+          <CarouselNext className="bg-[#BF7E32] text-white sm:block hidden" />
+        </Carousel>
+      </div>
+      {/* <HorizontalScrollCarousel cards={lavender.gallery} /> */}
       <Footer />
     </div>
   );
