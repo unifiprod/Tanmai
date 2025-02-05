@@ -48,20 +48,20 @@ function Footer() {
               <br /> Jubilee Enclave, Madhapur,
               <br /> Hyderabad - 500081
               <br />
-              Teleangana
+              Telangana
             </p>
           </div>
           <div>
             <h3 className="font-medium">For sales enquiries:</h3>
-            <p className="font-light text-sm">+91 40 48510705</p>
+            <p className="font-light text-sm">+91 9090093939</p>
           </div>
           <div>
             <h3 className="font-medium">For other enquiries:</h3>
-            <p className="font-light text-sm">+91 90 9009 3939</p>
+            <p className="font-light text-sm">+91 9090093939</p>
           </div>
           <div>
             <h3 className="font-medium">Email:</h3>
-            <p className="font-light text-sm">properties@tanmai.com</p>
+            <p className="font-light text-sm">Sales@thetanmai.com</p>
           </div>
           <div className="flex gap-5 items-center ">
             <FaInstagram className="text-white h-5 w-5 cursor-pointer hover:text-[#BF7E32] z-50" />

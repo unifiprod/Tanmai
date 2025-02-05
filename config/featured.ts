@@ -2,7 +2,7 @@ export const featured = [
   {
     id: 1,
     name: "Lavender Sky",
-    location: "Nagole, Hyderabad",
+    location: "pati-Gangapur, Kollur, Hyderabad ",
     projectType: "Apartment",
     bedrooms: "2,3 & 4 BHK",
     size: "4.07 Acres",

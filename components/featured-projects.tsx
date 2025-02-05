@@ -47,10 +47,7 @@ export default function FeaturedProjects({ featured }: FeaturedProjectsProps) {
             <CarouselItem key={item.id}>
               <Card className="bg-white rounded-lg cursor-pointer overflow-hidden">
                 <CardContent className="p-0 relative">
-                  <div
-                    onClick={() => router.push(item.route)}
-                    className="w-full h-[50vh] bg-black text-white rounded-t-lg overflow-hidden"
-                  >
+                  <div className="w-full h-[50vh] bg-black text-white rounded-t-lg overflow-hidden">
                     <Image
                       src={item.image || "/placeholder.svg"}
                       width={1000}
@@ -61,7 +58,10 @@ export default function FeaturedProjects({ featured }: FeaturedProjectsProps) {
                   </div>
                   <div className="sm:p-10 p-4 flex sm:flex-row flex-col  w-full  justify-between">
                     <div className="w-full">
-                      <h3 className="text-[#BF7E32] font-Arimo text-2xl mb-1">
+                      <h3
+                        onClick={() => router.push(item.route)}
+                        className="text-[#BF7E32] font-Arimo text-2xl mb-1 cursor-pointer"
+                      >
                         {item.name}
                       </h3>
                       <p className="font-poppins text-sm mb-4">
