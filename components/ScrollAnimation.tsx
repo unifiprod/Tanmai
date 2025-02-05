@@ -1,27 +1,27 @@
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import "./Scrollanimation.css";
 
 export const ScrollAnimation = () => {
   const containerRef = useRef(null);
 
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start 0.9", "end 1.1"],
-  });
+  // const { scrollYProgress } = useScroll({
+  //   target: containerRef,
+  //   offset: ["start 0.9", "end 1.1"],
+  // });
 
-  const bottomShadowValue = useTransform(
-    scrollYProgress,
-    [0, 1],
-    ["-100%", "0%"]
-  );
-  const imageValue = useTransform(scrollYProgress, [0, 1], ["-100%", "0%"]);
-  const topShadowValue = useTransform(
-    scrollYProgress,
-    [0, 1],
-    ["-25%", "100%"]
-  );
+  // const bottomShadowValue = useTransform(
+  //   scrollYProgress,
+  //   [0, 1],
+  //   ["-100%", "0%"]
+  // );
+  // const imageValue = useTransform(scrollYProgress, [0, 1], ["-100%", "0%"]);
+  // const topShadowValue = useTransform(
+  //   scrollYProgress,
+  //   [0, 1],
+  //   ["-25%", "100%"]
+  // );
 
   return (
     <section
@@ -47,11 +47,12 @@ export const ScrollAnimation = () => {
         </p>
       </div>
       <div className="sm:w-[50%]  w-full flex items-center relative">
-        <motion.div className="img-inner" style={{ translateX: imageValue }}>
-          <motion.div
+        {/* <motion.div className="img-inner" style={{ translateX: imageValue }}> */}
+        <motion.div className="img-inner">
+          {/* <motion.div
             className="bottom-shadow"
             style={{ translateX: bottomShadowValue }}
-          />
+          /> */}
           <Image
             className="image"
             width={700}
@@ -59,10 +60,10 @@ export const ScrollAnimation = () => {
             src={"/scroll.jpg"}
             alt="a green plant"
           />
-          <motion.div
+          {/* <motion.div
             className="top-shadow"
             style={{ translateX: topShadowValue }}
-          />
+          /> */}
         </motion.div>
       </div>
     </section>

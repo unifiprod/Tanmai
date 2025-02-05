@@ -298,13 +298,27 @@ function Krushi() {
                 <div className="p-1">
                   <Card>
                     <CardContent className="h-auto sm:w-72 w-full flex aspect-square items-center justify-center p-0">
-                      <Image
-                        src={image}
-                        width={100}
-                        height={100}
-                        alt={image}
-                        className="w-full h-auto object-cover aspect-square rounded-md"
-                      />
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <Image
+                            src={image}
+                            width={100}
+                            height={100}
+                            alt={image}
+                            className="w-full h-auto object-cover aspect-square rounded-md"
+                          />
+                        </DialogTrigger>
+                        <DialogContent className="p-10">
+                          <DialogTitle></DialogTitle>
+                          <Image
+                            src={image}
+                            width={400}
+                            height={400}
+                            alt={image}
+                            className="w-full h-auto object-cover aspect-square rounded-md"
+                          />
+                        </DialogContent>
+                      </Dialog>
                     </CardContent>
                   </Card>
                 </div>

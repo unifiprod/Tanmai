@@ -45,8 +45,8 @@ export default function FeaturedProjects({ featured }: FeaturedProjectsProps) {
         <CarouselContent>
           {featured.map((item) => (
             <CarouselItem key={item.id}>
-              <Card className="bg-white rounded-lg cursor-pointer">
-                <CardContent className="p-0">
+              <Card className="bg-white rounded-lg cursor-pointer overflow-hidden">
+                <CardContent className="p-0 relative">
                   <div
                     onClick={() => router.push(item.route)}
                     className="w-full h-[50vh] bg-black text-white rounded-t-lg overflow-hidden"
@@ -61,33 +61,18 @@ export default function FeaturedProjects({ featured }: FeaturedProjectsProps) {
                   </div>
                   <div className="sm:p-10 p-4 flex sm:flex-row flex-col  w-full  justify-between">
                     <div className="w-full">
-                      {/* <div className="flex items-start sm:gap-52 gap-10">
-                        <div>
-                          <h3 className="text-[#BF7E32] font-Arimo text-2xl mb-1">
-                            {item.name}
-                          </h3>
-                          <p className="font-poppins text-sm mb-4">
-                            {item.location}
-                          </p>
-                        </div>
-                        <p className="bg-[#BF7E32] text-sm text-white py-2 px-4 mt-6 rounded-sm">
+                      <h3 className="text-[#BF7E32] font-Arimo text-2xl mb-1">
+                        {item.name}
+                      </h3>
+                      <p className="font-poppins text-sm mb-4">
+                        {item.location}
+                      </p>
+
+                      {/* <p className="bg-[#BF7E32] text-sm text-white py-2 px-4 mt-6 rounded-sm">
                           {item.badge}
-                        </p>
-                      </div> */}
+                        </p> */}
+
                       <div className="grid grid-cols-2 font-Arimo gap-4">
-                        <div>
-                          <h3 className="text-[#BF7E32] font-Arimo text-2xl mb-1">
-                            {item.name}
-                          </h3>
-                          <p className="font-poppins text-sm mb-4">
-                            {item.location}
-                          </p>
-                        </div>
-                        <div className="w-full h-full flex flex-col justify-end items-start">
-                          <p className="bg-[#BF7E32] w-fit text-sm text-white py-2 px-4 h-fit rounded-sm">
-                            {item.badge}
-                          </p>
-                        </div>
                         <div>
                           <h4 className="text-sm font-semibold">
                             Project Type
@@ -129,6 +114,15 @@ export default function FeaturedProjects({ featured }: FeaturedProjectsProps) {
                         Enquire
                       </Button>
                     </div>
+                  </div>
+                  <div
+                    className={`absolute top-8 right-[-40px] ${
+                      item.badge === "Sales Open"
+                        ? "bg-red-600"
+                        : "bg-[#A66D2B]"
+                    } w-44 text-center text-white py-2 px-6 text-sm font-bold rotate-45 shadow-lg`}
+                  >
+                    {item.badge}
                   </div>
                 </CardContent>
               </Card>

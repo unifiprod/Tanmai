@@ -12,7 +12,7 @@ const TextReveal = ({ value }: any) => {
 
   return (
     <main>
-      <p ref={element} className="sm:text-5xl text-4xl flex flex-wrap">
+      <p ref={element} className="sm:text-5xl text-3xl flex flex-wrap">
         {words.map((word: any, i: any) => {
           const start = i / words.length;
           const end = start + 1 / words.length;

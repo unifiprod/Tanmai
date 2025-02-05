@@ -42,7 +42,7 @@ export const lavender = {
   bannerImg: "/lavender/2.webp",
   logo: "/lavender/logo.png",
   title: "Lavender Sky",
-  location: "3 mins drive to ORR Service Road, Kollur, Hyderabad",
+  location: "pati - Gangapur , Kollur , Hyderabad ",
   type: "Apartment",
   area: "4.07",
   rooms: "2,3 & 4 BHK",

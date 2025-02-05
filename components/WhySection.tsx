@@ -31,7 +31,7 @@ export const WhySection = () => {
         className="font-prata text-black sm:text-4xl text-3xl text-center"
         variants={itemVariants}
       >
-        Why TANMAI ventures ?
+        Why TANMAI ?
       </motion.h2>
       <motion.div
         className="sm:w-3/4 w-full grid items-start justify-start sm:grid-cols-2 grid-cols-1 sm:py-10 py-5 px-5 sm:gap-10 gap-5"
