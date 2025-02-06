@@ -21,7 +21,7 @@ export const featured = [
     size: "33 Acres",
     units: "463",
     image: "/krushi/g-5.jpg",
-    route: "/",
+    route: "/projects/nri-green",
     brochureLink: "/greenvalley/borchure.pdf",
     badge: "Sales Open",
   },

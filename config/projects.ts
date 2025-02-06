@@ -76,3 +76,37 @@ export const lavender = {
     "/lavender/10.webp",
   ],
 };
+
+export const nri = {
+  bannerImg: "/krushi/g-5.jpg",
+  logo: "",
+  title: "NRI Green County",
+  location: "sadasivpet municipality",
+  type: "Plotting",
+  area: "33",
+  rooms: "-",
+  units: 463,
+  borchureLink: "/greenvalley/borchure.pdf",
+  about:
+    "A premium plotting venture from SRI VIJAY GANAPATHI AVENUES PVT LTD across 35 acres, adjusting to proposed integrated township in 600 acres at a very convenient location on the main road NH-65 Mumbai Highway. The area is bustling with rapid developments making it an ideal investment destination. Our venture is located closer to the heart of developments such as educational institutions, infrastructural developments, commercial & residential developments coming around Sadasivpet.",
+  planLink: "/greenvalley/map.png",
+  amenities: [
+    "100% vasthu",
+    "100% clear title",
+    "DTCP Approved",
+    "Under Ground Sewerage System",
+    "Club House",
+    "Under Ground Electrical Lines",
+    "Black Top Roads",
+    "Park",
+    "Entrance Arch",
+    "Childrens Play Area",
+    "Gated Community",
+  ],
+  gallery: [
+    "/krushi/g-5.jpg",
+    "/krushi/g-7.jpg",
+    "/krushi/g-8.jpg",
+    "/krushi/g-9.jpg",
+  ],
+};

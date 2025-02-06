@@ -383,10 +383,7 @@ export default function Home() {
               <h3 className="font-medium">For sales enquiries:</h3>
               <p className="font-light text-sm">+91 40 48510705</p>
             </div>
-            <div>
-              <h3 className="font-medium">For other enquiries:</h3>
-              <p className="font-light text-sm">+91 90 9009 3939</p>
-            </div>
+
             <div>
               <h3 className="font-medium">Email:</h3>
               <p className="font-light text-sm">properties@tanmai.com</p>
@@ -407,7 +404,7 @@ export default function Home() {
               <motion.div variants={iconVariants}>
                 <SiGooglemaps
                   onClick={() =>
-                    router.push("https://goo.gl/maps/4JSNedjLDYKnKKHg9")
+                    router.push("https://goo.gl/maps/fX9Ag3UYC2o95F7x8")
                   }
                   className="text-white h-5 w-5 cursor-pointer hover:text-[#BF7E32]"
                 />

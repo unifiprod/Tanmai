@@ -55,10 +55,7 @@ function Footer() {
             <h3 className="font-medium">For sales enquiries:</h3>
             <p className="font-light text-sm">+91 9090093939</p>
           </div>
-          <div>
-            <h3 className="font-medium">For other enquiries:</h3>
-            <p className="font-light text-sm">+91 9090093939</p>
-          </div>
+
           <div>
             <h3 className="font-medium">Email:</h3>
             <p className="font-light text-sm">Sales@thetanmai.com</p>
@@ -70,7 +67,7 @@ function Footer() {
             <FaYoutube className="text-white h-5 w-5 cursor-pointer hover:text-[#BF7E32]" />
             <SiGooglemaps
               onClick={() =>
-                router.push("https://goo.gl/maps/4JSNedjLDYKnKKHg9")
+                router.push("https://goo.gl/maps/fX9Ag3UYC2o95F7x8")
               }
               className="text-white h-5 w-5 cursor-pointer hover:text-[#BF7E32]"
             />

@@ -263,6 +263,19 @@ function Krushi() {
             ))}
           </ul>
         </div>
+        <div className="flex flex-col items-start justify-start w-full gap-5 py-10">
+          <h2 className="font-Arimo text-3xl border-b-2 border-[#BF7E32] w-fit">
+            Map
+          </h2>
+        </div>
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.0153930977954!2d78.56567050000001!3d17.362992300000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb98caa8e3d1cd%3A0x1ed3ffc0062fe57a!2sChanakyapuri%20Main%20Rd%2C%20Nagole%2C%20Hyderabad%2C%20Telangana%20500068!5e0!3m2!1sen!2sin!4v1738856701235!5m2!1sen!2sin"
+          width="600"
+          height="450"
+          loading="lazy"
+          className="w-full "
+        ></iframe>
         <div
           ref={galleryRef}
           className="flex flex-col items-start justify-start w-full gap-5 py-10"

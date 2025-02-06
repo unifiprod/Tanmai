@@ -263,6 +263,19 @@ function Lavender() {
             ))}
           </ul>
         </div>
+        <div className="flex flex-col items-start justify-start w-full gap-5 py-10">
+          <h2 className="font-Arimo text-3xl border-b-2 border-[#BF7E32] w-fit">
+            Map
+          </h2>
+        </div>
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3805.2803641180253!2d78.22060807516736!3d17.49412498341143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDI5JzM4LjkiTiA3OMKwMTMnMjMuNSJF!5e0!3m2!1sen!2sin!4v1738856522364!5m2!1sen!2sin"
+          width="600"
+          height="450"
+          loading="lazy"
+          className="w-full"
+        ></iframe>
         <div
           ref={galleryRef}
           className="flex flex-col items-start justify-start w-full gap-5 py-10"
