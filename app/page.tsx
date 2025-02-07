@@ -381,12 +381,12 @@ export default function Home() {
             </div>
             <div>
               <h3 className="font-medium">For sales enquiries:</h3>
-              <p className="font-light text-sm">+91 40 48510705</p>
+              <p className="font-light text-sm">+91 9090093939</p>
             </div>
 
             <div>
               <h3 className="font-medium">Email:</h3>
-              <p className="font-light text-sm">properties@tanmai.com</p>
+              <p className="font-light text-sm">Sales@thetanmai.com</p>
             </div>
             <div className="flex gap-5 items-center">
               <motion.div variants={iconVariants}>
