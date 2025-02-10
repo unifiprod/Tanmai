@@ -307,7 +307,7 @@ export default function Home() {
       </div>
       <div className="w-full h-[90vh] bg-black -mt-16 sm:hidden block">
         <Image
-          src={"/lavender/2.webp"}
+          src={"/tanmai_m.jpg"}
           alt="hero image"
           width={500}
           height={500}

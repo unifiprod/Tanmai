@@ -42,7 +42,7 @@ const CenterImage: FC = () => {
   const backgroundSize = useTransform(
     scrollY,
     [0, SECTION_HEIGHT + 500],
-    ["170%", "100%"]
+    ["100%", "100%"]
   );
   const opacity = useTransform(
     scrollY,
@@ -52,12 +52,12 @@ const CenterImage: FC = () => {
 
   return (
     <motion.div
-      className="sticky top-0 h-screen w-full"
+      className="sticky top-0 h-screen w-full object-contain"
       style={{
         clipPath,
         backgroundSize,
         opacity,
-        backgroundImage: "url(/lavender/2.webp)",
+        backgroundImage: "url(/tanmai_d.jpg)",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
