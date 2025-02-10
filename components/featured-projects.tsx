@@ -95,25 +95,33 @@ export default function FeaturedProjects({ featured }: FeaturedProjectsProps) {
                         </div>
                       </div>
                     </div>
-                    <div className="flex flex-col gap-2 p-5 sm:w-1/2 w-full">
-                      <Button
-                        asChild
-                        className="w-full bg-[#BF7E32] hover:bg-[#A66D2B] text-white"
-                      >
-                        <a href={item.brochureLink} target="_blank" download>
-                          Download Brochure
-                        </a>
-                      </Button>
-                      <Button
-                        className="w-full bg-[#BF7E32] hover:bg-[#A66D2B] text-white"
-                        onClick={() => {
-                          /* Add enquiry logic here */
-                          router.push(item.route);
-                        }}
-                      >
-                        Enquire
-                      </Button>
-                    </div>
+                    {item.badge === "Sales Open" ? (
+                      <div className="flex flex-col gap-2 p-5 sm:w-1/2 w-full">
+                        <Button
+                          asChild
+                          className="w-full bg-[#BF7E32] hover:bg-[#A66D2B] text-white"
+                        >
+                          <a href={item.brochureLink} target="_blank" download>
+                            Download Brochure
+                          </a>
+                        </Button>
+                        <Button
+                          className="w-full bg-[#BF7E32] hover:bg-[#A66D2B] text-white"
+                          onClick={() => {
+                            /* Add enquiry logic here */
+                            router.push(item.route);
+                          }}
+                        >
+                          Enquire
+                        </Button>
+                      </div>
+                    ) : (
+                      <div className="flex flex-col gap-2 p-5 sm:w-1/2 w-full">
+                        <Button className="w-full bg-[#BF7E32] hover:bg-[#A66D2B] text-white">
+                          Upcomming
+                        </Button>
+                      </div>
+                    )}
                   </div>
                   <div
                     className={`absolute top-8 right-[-40px] ${
