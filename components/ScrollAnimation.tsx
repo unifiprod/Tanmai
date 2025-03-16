@@ -57,7 +57,7 @@ export const ScrollAnimation = () => {
             className="image"
             width={700}
             height={1000}
-            src={"/scroll.jpg"}
+            src={"/krushi/g-10.jpg"}
             alt="a green plant"
           />
           {/* <motion.div
